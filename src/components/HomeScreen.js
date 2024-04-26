@@ -1,26 +1,19 @@
 import React, { useState } from "react";
 
-//importing css code
-import ".././assets/css/style.css";
-
-//importing css vendor variables
-import ".././assets/vendor/bootstrap/css/bootstrap.min.css";
-import ".././assets/vendor/bootstrap-icons/bootstrap-icons.css";
-import ".././assets/vendor/boxicons/css/boxicons.min.css";
-import ".././assets/vendor/glightbox/css/glightbox.min.css";
-import ".././assets/vendor/remixicon/remixicon.css";
-import ".././assets/vendor/swiper/swiper-bundle.min.css";
-
 function HomeScreen() {
-  const [links, setLinks] = useState(Array(15).fill("")); // Array to store links for each category
+  const [links, setLinks] = useState([
+    "https://strawpoll.com/YVyPmjpXLnN",
+    "https://strawpoll.com/kogjkAm2PZ6", // Tech Savvy link
+    "https://strawpoll.com/malestylistoftheyear",
+    // Add links for other categories here...
+  ]);
+  const titles = ["Rookie of the Year", "Tech Savvy", "Male Stylist of the Year"];
 
-  // Function to handle copying link to clipboard
   const copyToClipboard = (index) => {
     const linkToCopy = links[index];
     navigator.clipboard.writeText(linkToCopy)
       .then(() => {
         console.log("Link copied to clipboard:", linkToCopy);
-        // You can add a toast or notification to indicate successful copy
       })
       .catch((error) => {
         console.error("Failed to copy:", error);
@@ -36,18 +29,21 @@ function HomeScreen() {
               <div className="row justify-content-center">
                 <div className="col-lg-8 col-md-10 d-flex flex-column align-items-center justify-content-center">
                   {links.map((link, index) => (
-                    <div key={index} className="mb-3">
-                      <div className="input-group">
+                    <div key={index} className="mb-4" style={{ textAlign: "center" }}>
+                      <h3 className="mb-2">{titles[index]}</h3>
+                      <div className="input-group" style={{ maxWidth: "600px", margin: "0 auto" }}>
                         <input
                           type="text"
                           className="form-control"
                           value={link}
                           disabled
+                          style={{ width: "calc(100% - 110px)", minWidth: "250px", marginRight: "10px", padding: "10px" }}
                         />
                         <button
                           className="btn btn-outline-secondary"
                           type="button"
                           onClick={() => copyToClipboard(index)}
+                          style={{ padding: "10px 20px" }}
                         >
                           Copy
                         </button>
