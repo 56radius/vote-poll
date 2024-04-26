@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function HomeScreen() {
   const links = [
@@ -60,6 +60,7 @@ function HomeScreen() {
                           disabled
                           style={{ width: "calc(100% - 10px)", minWidth: "250px", padding: "10px", cursor: "pointer" }}
                           onClick={() => window.open(link, "_blank")}
+                          target="_blank"
                         />
                       </div>
                     </div>
