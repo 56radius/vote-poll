@@ -1,24 +1,45 @@
 import React, { useState } from "react";
 
 function HomeScreen() {
-  const [links, setLinks] = useState([
-    "https://strawpoll.com/YVyPmjpXLnN",
-    "https://strawpoll.com/kogjkAm2PZ6", // Tech Savvy link
-    "https://strawpoll.com/malestylistoftheyear",
-    // Add links for other categories here...
-  ]);
-  const titles = ["Rookie of the Year", "Tech Savvy", "Male Stylist of the Year"];
+  const links = [
+    "https://strawpoll.com/kogjkAm2PZ6", // Tech Savvy
+    "https://strawpoll.com/GeZAO0VM1nV", // Best course rep
+    "https://strawpoll.com/wAg3ArVOoy8", // Neatest Students
+    "https://strawpoll.com/YVyPmjpXLnN", // Rookie of the year
+    "https://strawpoll.com/BDyNEleXeZR", // Male Stylist of the year
+    "https://strawpoll.com/Q0ZpRmkjEnM", // Female Stylist of the year
+    "https://strawpoll.com/e7ZJGW2XPy3", // Best Instrumentalist of the year
+    "https://strawpoll.com/X3nk40z7PgE", // Best vocalis
+    "https://strawpoll.com/PbZqRzeWKyN", // Most fashionable female
+    "https://strawpoll.com/bVg8oDVe3nY", // Most fashionable male
+    "https://strawpoll.com/DwyoDJ7aLnA", // Entreprenuer of the year
+    "https://strawpoll.com/QrgebX6x2Zp", // Sportsman of the year
+    "https://strawpoll.com/e2narB1x0gB", // Sportswoman of the year
+    "https://strawpoll.com/GPgV6NoPzga", // Artfully Creative of the year
+    "https://strawpoll.com/eNg691VE0nA", // Most Sociable female of the year
+    "https://strawpoll.com/jVyG8zm9Gn7", // Most sociable male of the year
+    "https://strawpoll.com/e2narB1J0gB", // Most influential female of the year
+  ];
 
-  const copyToClipboard = (index) => {
-    const linkToCopy = links[index];
-    navigator.clipboard.writeText(linkToCopy)
-      .then(() => {
-        console.log("Link copied to clipboard:", linkToCopy);
-      })
-      .catch((error) => {
-        console.error("Failed to copy:", error);
-      });
-  };
+  const titles = [
+    "Tech Savvy",
+    "Best course rep",
+    "Neatest Students",
+    "Rookie of the year",
+    "Male Stylist of the year",
+    "Female Stylist of the year",
+    "Best Instrumentalist of the year",
+    "Best vocalis",
+    "Most fashionable female",
+    "Most fashionable male",
+    "Entreprenuer of the year",
+    "Sportsman of the year",
+    "Sportswoman of the year",
+    "Artfully Creative of the year",
+    "Most Sociable female of the year",
+    "Most sociable male of the year",
+    "Most influential female of the year",
+  ];
 
   return (
     <div>
@@ -37,16 +58,9 @@ function HomeScreen() {
                           className="form-control"
                           value={link}
                           disabled
-                          style={{ width: "calc(100% - 110px)", minWidth: "250px", marginRight: "10px", padding: "10px" }}
+                          style={{ width: "calc(100% - 10px)", minWidth: "250px", padding: "10px", cursor: "pointer" }}
+                          onClick={() => window.open(link, "_blank")}
                         />
-                        <button
-                          className="btn btn-outline-secondary"
-                          type="button"
-                          onClick={() => copyToClipboard(index)}
-                          style={{ padding: "10px 20px" }}
-                        >
-                          Copy
-                        </button>
                       </div>
                     </div>
                   ))}
