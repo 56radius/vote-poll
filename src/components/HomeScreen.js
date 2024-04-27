@@ -55,17 +55,17 @@ function HomeScreen() {
                 <div className="col-lg-8 col-md-10 d-flex flex-column align-items-center justify-content-center">
                   {links.map((link, index) => (
                     <div key={index} className="mb-4" style={{ textAlign: "center", marginTop: "20px" }}>
-                      <div className="category-card" style={{ maxWidth: "600px", margin: "0 auto", marginBottom: "20px", background: "#f2f2f2", padding: "10px", borderRadius: "8px" }}>
+                      <div className="category-card" style={{ maxWidth: "600px", margin: "0 auto", marginBottom: "50px", background: "#f2f2f2", padding: "10px", borderRadius: "8px" }}>
                         <div className="category-content">
                           <h3 className="category-title">{titles[index]}</h3>
-                          <div className="input-group" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <div className="input-group" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "10px 0" }}>
                             <input
                               type="text"
                               className="form-control clickable-input"
                               value={link}
                               readOnly={true}
                               onClick={() => handleInputClick(link)}
-                              style={{ cursor: "pointer", width: "80%", margin: "auto", textAlign: "center" }}
+                              style={{ cursor: "pointer", width: "80%", paddingTop: "30px", marginTop: "auto", textAlign: "center", borderRadius: "5px", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}
                             />
                           </div>
                         </div>
