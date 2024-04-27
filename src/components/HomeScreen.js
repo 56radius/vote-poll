@@ -41,6 +41,10 @@ function HomeScreen() {
     "Most influential female of the year",
   ];
 
+  const handleInputClick = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div>
       <main>
@@ -50,18 +54,21 @@ function HomeScreen() {
               <div className="row justify-content-center">
                 <div className="col-lg-8 col-md-10 d-flex flex-column align-items-center justify-content-center">
                   {links.map((link, index) => (
-                    <div key={index} className="mb-4" style={{ textAlign: "center" }}>
-                      <h3 className="mb-2">{titles[index]}</h3>
-                      <div className="input-group" style={{ maxWidth: "600px", margin: "0 auto" }}>
-                        <input
-                          type="text"
-                          className="form-control"
-                          value={link}
-                          disabled
-                          style={{ width: "calc(100% - 10px)", minWidth: "250px", padding: "10px", cursor: "pointer" }}
-                          onClick={() => window.open(link, "_blank")}
-                          target="_blank"
-                        />
+                    <div key={index} className="mb-4" style={{ textAlign: "center", marginTop: "20px" }}>
+                      <div className="category-card" style={{ maxWidth: "600px", margin: "0 auto", marginBottom: "20px", background: "#f2f2f2", padding: "10px", borderRadius: "8px" }}>
+                        <div className="category-content">
+                          <h3 className="category-title">{titles[index]}</h3>
+                          <div className="input-group">
+                            <input
+                              type="text"
+                              className="form-control clickable-input"
+                              value={link}
+                              readOnly={true}
+                              onClick={() => handleInputClick(link)}
+                              style={{ cursor: "pointer" }}
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
