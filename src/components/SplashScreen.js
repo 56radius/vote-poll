@@ -14,7 +14,7 @@ function SplashScreen() {
 
   return (
     <div className={`splash-screen ${showSplash ? "show" : "hide"}`}>
-      <h2> Hello Straw Pall </h2>
+      <h2> Come and Vote </h2>
     </div>
   );
 }

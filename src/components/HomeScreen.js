@@ -58,14 +58,14 @@ function HomeScreen() {
                       <div className="category-card" style={{ maxWidth: "600px", margin: "0 auto", marginBottom: "20px", background: "#f2f2f2", padding: "10px", borderRadius: "8px" }}>
                         <div className="category-content">
                           <h3 className="category-title">{titles[index]}</h3>
-                          <div className="input-group">
+                          <div className="input-group" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                             <input
                               type="text"
                               className="form-control clickable-input"
                               value={link}
                               readOnly={true}
                               onClick={() => handleInputClick(link)}
-                              style={{ cursor: "pointer" }}
+                              style={{ cursor: "pointer", width: "80%", margin: "auto", textAlign: "center" }}
                             />
                           </div>
                         </div>
