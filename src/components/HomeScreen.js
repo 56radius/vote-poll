@@ -11,7 +11,7 @@ function HomeScreen() {
     "https://strawpoll.com/e7ZJGW2XPy3", // Best Instrumentalist of the year
     "https://strawpoll.com/X3nk40z7PgE", // Best vocalis
     "https://strawpoll.com/PbZqRzeWKyN", // Most fashionable female
-    "https://strawpoll.com/bVg8oDVe3nY", // Most fashionable male
+    "https://strawpoll.com/eJnvvYKrknv", // Most fashionable male
     "https://strawpoll.com/DwyoDJ7aLnA", // Entreprenuer of the year
     "https://strawpoll.com/QrgebX6x2Zp", // Sportsman of the year
     "https://strawpoll.com/e2narB1x0gB", // Sportswoman of the year
