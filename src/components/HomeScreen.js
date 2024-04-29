@@ -19,6 +19,7 @@ function HomeScreen() {
     "https://strawpoll.com/eNg691VE0nA", // Most Sociable female of the year
     "https://strawpoll.com/jVyG8zm9Gn7", // Most sociable male of the year
     "https://strawpoll.com/e2narB1J0gB", // Most influential female of the year
+    "https://strawpoll.com/2ayLkYmeeZ4", // Producer Of the year
   ];
 
   const titles = [
@@ -39,6 +40,7 @@ function HomeScreen() {
     "Most Sociable female of the year",
     "Most sociable male of the year",
     "Most influential female of the year",
+    "Producer of the Year"
   ];
 
   const handleInputClick = (link) => {
