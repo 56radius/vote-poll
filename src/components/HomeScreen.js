@@ -22,6 +22,7 @@ function HomeScreen() {
     "https://strawpoll.com/2ayLkYmeeZ4", // Producer Of the year
     "https://strawpoll.com/mpnboDMQQg5", // Photographer of the year
     "https://strawpoll.com/PKgl3Lqk1np", // Artist of the year
+    "https://strawpoll.com/GJn478l86yz", // Most Inflential male
   ];
 
   const titles = [
@@ -41,10 +42,11 @@ function HomeScreen() {
     "Artfully Creative of the year",
     "Most Sociable female of the year",
     "Most sociable male of the year",
-    "Most influential female of the year",
+    "Most influential female",
     "Producer of the year",
     "Photographer of the year",
-    "Artist of the year"
+    "Artist of the year",
+    "Most influential male"
   ];
 
   const handleInputClick = (link) => {
