@@ -62,7 +62,36 @@ function HomeScreen() {
         </div>
       </header>
 
-      {/* */}
+      {/* Second header */}
+        {/* Second header */}
+        <section id="hero" className="d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+              <h1>
+                CREATE BEAUTIFUL & ENGAGING POLLS
+              </h1>
+              <ul>
+                <p>
+                 Please come and create your favorite poll to vote and don't worry there's a fair voting system in everything you want to vote in"
+                </p>
+              </ul>
+              <div className="mt-3">
+                <button
+                  style={{
+                    borderWidth: 0,
+                  }}
+                  className="btn-get-started scrollto"
+                >
+                  {" "}
+                  Get Started{" "}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
