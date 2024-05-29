@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 //importing css code
 import ".././assets/css/style.css";
 
@@ -12,11 +14,11 @@ import ".././assets/vendor/remixicon/remixicon.css";
 import ".././assets/vendor/swiper/swiper-bundle.min.css";
 
 function HomeScreen() {
-
+  const navigate = useNavigate();
   return (
     <div>
-     {/* First header */}
-     <header id="header" className="fixed-top ">
+      {/* First header */}
+      <header id="header" className="fixed-top ">
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <button
@@ -36,24 +38,16 @@ function HomeScreen() {
 
           <nav id="navbar" className="navbar">
             <ul>
-          
-              <li style={{background: "transparent"}}>
-                <a
-                  style={{ textDecoration: "none" }}
-                  className="getstarted scrollto"
-                  
-                >
-                  Create
+              <li style={{ background: "transparent" }}>
+                <a style={{ textDecoration: "none" }} className="getstarted scrollto">
+                  Sign up
                 </a>
               </li>
               <li>
-                <a
-                  style={{ textDecoration: "none" }}
-                  className="getstarted scrollto"
-                  
-                >
-                  {" "}
-                  Try AVA{" "}
+                <a 
+                onClick={() => navigate("/login")}
+                style={{ textDecoration: "none" }} className="getstarted scrollto">
+                 Login
                 </a>
               </li>
             </ul>
@@ -63,35 +57,40 @@ function HomeScreen() {
       </header>
 
       {/* Second header */}
-        {/* Second header */}
-        <section id="hero" className="d-flex align-items-center">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-              <h1>
-                CREATE BEAUTIFUL & ENGAGING POLLS
-              </h1>
-              <ul>
-                <p>
-                 Please come and create your favorite poll to vote and don't worry there's a fair voting system in everything you want to vote in"
-                </p>
-              </ul>
+      <section id="hero" className="d-flex align-items-center justify-content-center">
+        <div className="container text-center">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <h1>CREATE BEAUTIFUL & ENGAGING POLLS</h1>
+              <p>
+                Please come and create your favorite poll to vote and don't worry there's a fair voting system in everything you want to vote in.
+              </p>
               <div className="mt-3">
+                <input
+                  type="text"
+                  placeholder="Search trending polls..."
+                  style={{
+                    width: "100%",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #ccc",
+                  }}
+                />
                 <button
                   style={{
                     borderWidth: 0,
+                    marginTop: "20px"
                   }}
                   className="btn-get-started scrollto"
                 >
-                  {" "}
-                  Get Started{" "}
+                  Create Poll
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }

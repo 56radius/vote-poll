@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //importing the main components
 import SplashScreen from "./components/SplashScreen";
 import HomeScreen from "./components/HomeScreen";
-
+import LoginScreen from "./components/LoginScreen";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -25,6 +25,7 @@ function App() {
             path="/"
             element={showSplash ? <SplashScreen /> : <HomeScreen />}
           /> 
+          <Route path="/login" element={<LoginScreen />} />
         </Routes>
       </div>
     </Router>
