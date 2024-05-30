@@ -87,7 +87,7 @@ function HomeScreen() {
                     padding: "10px",
                     marginBottom: "10px",
                     borderRadius: "5px",
-                    border: "1px solid #ccc",
+                    border: "2px solid #ccc",
                     background: "transparent",
                     color: "black" // Change text color
                   }}

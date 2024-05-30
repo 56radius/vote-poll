@@ -21,9 +21,7 @@ function LoginScreen() {
                 className="col-lg-6 d-flex flex-column align-items-start justify-content-center p-4"
                 style={{
                   height: "100%",
-                  borderRight: "2px solid #ccc",
-                  borderRadius: "20px",
-                  border: "5px solid #ccc",
+                  borderRight: "5px solid #ccc",
                   boxSizing: "border-box",
                 }}
               >
@@ -146,7 +144,7 @@ function LoginScreen() {
               </div>
 
               {/* Right column for the full-sized picture */}
-              <div className="col-lg-6 d-none d-lg-block p-0" style={{ height: "100%" }}>
+              <div className="col-lg-6 d-none d-lg-block p-0" style={{ height: "100%", borderRadius: "0 20px 20px 0" }}>
                 <img
                   src={Vote}
                   alt="Voting"
@@ -154,7 +152,8 @@ function LoginScreen() {
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    borderRadius: "20px",
+                    borderRadius: "0 20px 20px 0",
+                    boxSizing: "border-box",
                   }}
                 />
               </div>
