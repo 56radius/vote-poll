@@ -74,8 +74,8 @@ function HomeScreen() {
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <h1 style={{ color: "black", fontWeight: "bold" }}>CREATE BEAUTIFUL & ENGAGING POLLS</h1>
-              <p style={{ color: "black", fontWeight: 'bold', fontSize: "80%", textAlign: "center" }}>
+              <h1 style={{ color: "#fff", fontWeight: "bold" }}>CREATE BEAUTIFUL & ENGAGING POLLS</h1>
+              <p style={{ color: "#fff", fontWeight: 'bold', fontSize: "80%", textAlign: "center" }}>
                 Please come and create your favorite poll to vote and don't worry there's a fair voting system in everything you want to vote in.
               </p>
               <div className="mt-3">

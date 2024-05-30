@@ -373,7 +373,7 @@ h6 {
 
 /* CSS for the search input placeholder color */
 .search-input::placeholder {
-  color: black;
+  color: white;
 }
 
 
