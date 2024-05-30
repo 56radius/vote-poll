@@ -361,14 +361,21 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Adjust opacity for darker effect */
+  url("../img/voting.jpeg") center center;
   background-size: cover;
-  border-bottom: 2px solid white;
+  position: relative;
 }
 
 #hero .container {
   padding-top: 80px;
 }
+
+/* CSS for the search input placeholder color */
+.search-input::placeholder {
+  color: black;
+}
+
 
 #hero h1 {
   margin: 0;

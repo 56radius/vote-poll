@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useNavigate } from "react-router-dom";
 
 //importing css code
@@ -18,36 +17,47 @@ function HomeScreen() {
   return (
     <div>
       {/* First header */}
-      <header id="header" className="fixed-top ">
+      <header id="header" className="fixed-top" style={{ backgroundColor: "transparent" }}>
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <button
               style={{
                 borderWidth: 0,
-                borderColor: "#fff",
-                background: "#fff",
-                color: "blue",
+                background: "transparent",
+                color: "lightblue",
               }}
               href="index.html"
             >
               Vote Poll
             </button>
           </h1>
-          {/* 
-      <a href="index.html" className="logo"><img src="assets/img/logo.png" alt="" className="img-fluid"></a> */}
-
           <nav id="navbar" className="navbar">
             <ul>
-              <li style={{ background: "transparent" }}>
-                <a style={{ textDecoration: "none" }} className="getstarted scrollto">
+              <li>
+                <button
+                  style={{
+                    textDecoration: "none",
+                    background: "lightblue",
+                    borderColor: "lightblue",
+                    color: "black",
+                    padding: "10px 20px",
+                    borderRadius: "100px",
+                    borderWidth: "1px",
+                    borderStyle: "solid",
+                  }}
+                  className="getstarted scrollto"
+                  onClick={() => navigate("/signup")}
+                >
                   Sign up
-                </a>
+                </button>
               </li>
               <li>
-                <a 
-                onClick={() => navigate("/login")}
-                style={{ textDecoration: "none" }} className="getstarted scrollto">
-                 Login
+                <a
+                  onClick={() => navigate("/login")}
+                  style={{ textDecoration: "none", color: "#fff" }}
+                  className="getstarted scrollto"
+                >
+                  Login
                 </a>
               </li>
             </ul>
@@ -57,12 +67,15 @@ function HomeScreen() {
       </header>
 
       {/* Second header */}
-      <section id="hero" className="d-flex align-items-center justify-content-center">
+      <section
+        id="hero"
+        className="d-flex align-items-center justify-content-center"
+      >
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <h1>CREATE BEAUTIFUL & ENGAGING POLLS</h1>
-              <p>
+              <h1 style={{ color: "black", fontWeight: "bold" }}>CREATE BEAUTIFUL & ENGAGING POLLS</h1>
+              <p style={{ color: "black", fontWeight: 'bold', fontSize: "80%", textAlign: "center" }}>
                 Please come and create your favorite poll to vote and don't worry there's a fair voting system in everything you want to vote in.
               </p>
               <div className="mt-3">
@@ -75,7 +88,10 @@ function HomeScreen() {
                     marginBottom: "10px",
                     borderRadius: "5px",
                     border: "1px solid #ccc",
+                    background: "transparent",
+                    color: "black" // Change text color
                   }}
+                  className="search-input"
                 />
                 <button
                   style={{
