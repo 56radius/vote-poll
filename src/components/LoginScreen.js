@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function LoginScreen() {
   const navigate = useNavigate();
-  
- 
+
   return (
     <div>
       <main>
@@ -18,32 +17,19 @@ function LoginScreen() {
                     <button
                       style={{
                         borderWidth: 0,
-                        background: "#fff",
+                        background: "transparent",
                       }}
                       href="index.html"
                       className="logo d-flex align-items-center w-auto"
                     >
-                      <span className="d-none d-lg-block">
-                        {" "}
-                        <span
-                          style={{
-                            color: "green",
-                          }}
-                        >
-                          {" "}
-                          AVINX{" "}
-                        </span>{" "}
-                        HEALTH{" "}
-                      </span>
                     </button>
                   </div>
                   <form action="" className="mt" method="post">
-                    <div className="card mb-3">
+                    <div className="card mb-3" style={{ background: "transparent" }}>
                       <div className="card-body">
                         <div className="pt-4 pb-2">
                           <h5 className="card-title text-center pb-0 fs-4">
-                            {" "}
-                            AVA is here to help you{" "}
+                            Vote - Poll
                           </h5>
                         </div>
 
@@ -55,7 +41,7 @@ function LoginScreen() {
                             <input
                               type="email"
                               className="form-control"
-                             
+                              placeholder="Email address"
                               required
                             />
                             <div className="invalid-feedback">
@@ -73,7 +59,7 @@ function LoginScreen() {
                             <input
                               type="password"
                               className="form-control"
-                             
+                              placeholder="......."
                               required
                             />
                             <div className="invalid-feedback">
@@ -100,10 +86,10 @@ function LoginScreen() {
                           </div>
                           <div className="col-12">
                             <button
-                            
                               className="btn btn-primary w-100"
                               name="login"
                               type="button"
+                              style={{ }}
                             >
                               Login
                             </button>
@@ -122,13 +108,15 @@ function LoginScreen() {
                             </p>
                           </div>
 
-                          <div className="col-12">
-                            <p className="small mb-0">
-                              Don't have an account?{" "}
-                              <a onClick={() => navigate("/register")}>
-                                Create an account
-                              </a>
-                            </p>
+                          <div className="col-12 d-flex justify-content-between align-items-center">
+                            <p className="small mb-0">Don't have an account?</p>
+                            <button
+                              className="btn btn-secondary"
+                              onClick={() => navigate("/register")}
+                              style={{ background: "transparent", border: "1px solid #6c757d", color: "black" }}
+                            >
+                              Create an account
+                            </button>
                           </div>
                         </form>
                       </div>
