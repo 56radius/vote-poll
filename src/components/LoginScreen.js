@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // Importing the images
 import Vote from "../assets/img/voting.jpeg";
+import Logo from "../assets/img/logo.png";  // Add the path to your logo image
 
 import Swal from "sweetalert2";
 
@@ -11,12 +12,21 @@ function LoginScreen() {
 
   return (
     <div>
-      <main>
-        <div className="container-fluid">
-          <section className="section register min-vh-100 d-flex">
-            <div className="row w-100">
+      <main style={{ height: "100vh" }}>
+        <div className="container-fluid p-0" style={{ height: "100%" }}>
+          <section className="section register min-vh-100 d-flex" style={{ height: "100%" }}>
+            <div className="row w-100 m-0" style={{ height: "100%" }}>
               {/* Left column for the login form */}
-              <div className="col-lg-6 d-flex flex-column align-items-start justify-content-center" style={{ minHeight: "100vh" }}>
+              <div
+                className="col-lg-6 d-flex flex-column align-items-start justify-content-center p-4"
+                style={{
+                  height: "100%",
+                  borderRight: "2px solid #ccc",
+                  borderRadius: "20px",
+                  border: "5px solid #ccc",
+                  boxSizing: "border-box",
+                }}
+              >
                 <div className="container h-100 d-flex flex-column justify-content-center">
                   <div className="row justify-content-start">
                     <div className="col-lg-10 col-md-12 d-flex flex-column align-items-start justify-content-center">
@@ -34,7 +44,8 @@ function LoginScreen() {
                       <form action="" className="w-100" method="post">
                         <div className="card mb-3" style={{ background: "transparent", border: "none" }}>
                           <div className="card-body">
-                            <div className="pt-4 pb-2">
+                            <div className="pt-4 pb-2 text-center">
+                              <img src={Logo} alt="Logo" style={{ width: "100px", marginBottom: "20px" }} /> {/* Logo added here */}
                               <h5 className="card-title text-center pb-0 fs-4">
                                 Vote - Poll
                               </h5>
@@ -135,11 +146,16 @@ function LoginScreen() {
               </div>
 
               {/* Right column for the full-sized picture */}
-              <div className="col-lg-6 d-none d-lg-block">
+              <div className="col-lg-6 d-none d-lg-block p-0" style={{ height: "100%" }}>
                 <img
                   src={Vote}
                   alt="Voting"
-                  style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "20px",
+                  }}
                 />
               </div>
             </div>
