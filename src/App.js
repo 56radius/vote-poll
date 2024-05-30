@@ -6,6 +6,9 @@ import SplashScreen from "./components/SplashScreen";
 import HomeScreen from "./components/HomeScreen";
 import LoginScreen from "./components/LoginScreen";
 
+//importing dashboard components
+import DashboardScreen from "./components/Dashboard/DashboardScreen";
+
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -26,6 +29,7 @@ function App() {
             element={showSplash ? <SplashScreen /> : <HomeScreen />}
           /> 
           <Route path="/login" element={<LoginScreen />} />
+          <Route path="/dashboard" element={<DashboardScreen />} />
         </Routes>
       </div>
     </Router>

@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-//importing images
-import picture from "../assets/img/mental.jpeg";
-
 import Swal from "sweetalert2";
 
 function LoginScreen() {
   const navigate = useNavigate();
-
+  
+ 
   return (
     <div>
       <main>
         <div className="container">
-          <section className="section register min-vh-100 py-4">
+          <section className="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div className="container">
               <div className="row justify-content-center">
-                <div className="col-lg-6 col-md-8 d-flex flex-column justify-content-center">
-                  <div className="py-4">
+                <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                  <div className="d-flex justify-content-center py-4">
                     <button
                       style={{
                         borderWidth: 0,
@@ -50,20 +47,15 @@ function LoginScreen() {
                           </h5>
                         </div>
 
-                        <form
-                          className="row g-3 needs-validation"
-                          noValidate
-                        >
+                        <form className="row g-3 needs-validation" noValidate>
                           <div className="col-12">
-                            <label
-                              htmlFor="email"
-                              className="form-label"
-                            >
+                            <label htmlFor="email" className="form-label">
                               Email
                             </label>
                             <input
                               type="email"
                               className="form-control"
+                             
                               required
                             />
                             <div className="invalid-feedback">
@@ -81,6 +73,7 @@ function LoginScreen() {
                             <input
                               type="password"
                               className="form-control"
+                             
                               required
                             />
                             <div className="invalid-feedback">
@@ -107,6 +100,7 @@ function LoginScreen() {
                           </div>
                           <div className="col-12">
                             <button
+                            
                               className="btn btn-primary w-100"
                               name="login"
                               type="button"
@@ -140,11 +134,6 @@ function LoginScreen() {
                       </div>
                     </div>
                   </form>
-                </div>
-                <div className="col-lg-6 d-none d-lg-block">
-                  <div className="image-container" style={{ height: "100vh" }}>
-                    <img src={picture} alt="picture" className="img-fluid h-100" />
-                  </div>
                 </div>
               </div>
             </div>
