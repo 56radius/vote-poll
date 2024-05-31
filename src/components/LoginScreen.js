@@ -52,12 +52,12 @@ function LoginScreen() {
                             <form className="row g-3 needs-validation" noValidate>
                               <div className="col-12">
                                 <label htmlFor="email" className="form-label">
-                                  Email
+                                 MTU Email
                                 </label>
                                 <input
                                   type="email"
                                   className="form-control"
-                                  placeholder="Email address"
+                                  placeholder="mtu email address"
                                   required
                                 />
                                 <div className="invalid-feedback">
