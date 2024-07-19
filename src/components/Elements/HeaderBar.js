@@ -41,7 +41,7 @@ function HeaderBar() {
         <header style={styles.headerBar}>
             <h1 style={styles.headerTitle}>Voting Dashboard</h1>
             <div style={styles.userProfile}>
-                <span style={styles.userName}>John Doe</span>
+                <span style={styles.userName}> Glory Olubanjo </span>
                 <img 
                     src="https://via.placeholder.com/40" 
                     alt="User Profile"

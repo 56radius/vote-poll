@@ -1,12 +1,16 @@
 import React from "react";
-import HeaderBar from "../Elements/HeaderBar"; // Import the HeaderBar component
+import { useNavigate } from "react-router-dom";
+import HeaderBar from "../Elements/HeaderBar";
+import Sidebar from "../Elements/Sidebar"; // Import the Sidebar component
 
 function DashboardScreen() {
+    const navigate = useNavigate(); // Hook to programmatically navigate
+
     // Example data for polls
     const polls = [
-        { id: 1, title: "Poll 1", description: "Description for Poll 1" },
-        { id: 2, title: "Poll 2", description: "Description for Poll 2" },
-        { id: 3, title: "Poll 3", description: "Description for Poll 3" }
+        { id: 1, title: "Sport Vote", description: "Vote for your best sport man and sport woman" },
+        { id: 2, title: "Election Vote", description: "Who would win the next post it could be you" },
+        { id: 3, title: "Best Lecturer", description: "Best lecturer post" }
     ];
 
     // Inline styles
@@ -18,58 +22,6 @@ function DashboardScreen() {
             backgroundColor: '#e3f2fd', // Light blue background
             color: '#0d47a1', // Dark blue text color
         },
-        sidebar: {
-            width: '250px',
-            backgroundColor: '#0d47a1', // Dark blue sidebar
-            color: '#fff',
-            padding: '20px',
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'fixed',
-            height: '100%',
-            top: '60px', // Adjusted for header height
-            bottom: '0',
-        },
-        sidebarItems: {
-            flex: '1',
-        },
-        sidebarItem: {
-            padding: '10px 15px',
-            marginBottom: '10px',
-            cursor: 'pointer',
-            borderRadius: '5px',
-            transition: 'background-color 0.3s',
-            display: 'flex',
-            alignItems: 'center',
-        },
-        sidebarItemActive: {
-            backgroundColor: '#b0bec5', // Grey for active item
-            color: '#0d47a1', // Dark blue text
-        },
-        sidebarItemHover: {
-            backgroundColor: '#1976d2', // Medium blue for hover
-        },
-        sidebarIcon: {
-            marginRight: '10px',
-        },
-        sidebarFooter: {
-            marginTop: 'auto', // Pushes footer items to the bottom
-        },
-        sidebarFooterItem: {
-            padding: '10px 15px',
-            marginBottom: '10px',
-            cursor: 'pointer',
-            borderRadius: '5px',
-            transition: 'background-color 0.3s',
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: '#0d47a1', // Dark blue background for footer items
-            color: '#fff',
-        },
-        sidebarFooterItemHover: {
-            backgroundColor: '#1976d2', // Medium blue for hover
-        }
-        ,
         mainContent: {
             marginLeft: '250px',
             padding: '20px',
@@ -127,66 +79,12 @@ function DashboardScreen() {
         voteButtonHover: {
             backgroundColor: '#1976d2', // Medium blue for hover
         },
-        sidebarFooter: {
-            marginTop: 'auto', // Pushes footer items to the bottom
-        }
     };
 
     return (
         <div style={styles.dashboardScreen}>
             <HeaderBar /> {/* Include the HeaderBar component */}
-            <aside style={styles.sidebar}>
-                <div style={styles.sidebarItems}>
-                    <div
-                        style={{ ...styles.sidebarItem, ...styles.sidebarItemActive }}
-                    >
-                        <i className="fas fa-tachometer-alt" style={styles.sidebarIcon}></i>
-                        Dashboard
-                    </div>
-                    <div
-                        style={styles.sidebarItem}
-                        onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarItemHover.backgroundColor}
-                        onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
-                    >
-                        <i className="fas fa-poll" style={styles.sidebarIcon}></i>
-                        My Polls
-                    </div>
-                    <div
-                        style={styles.sidebarItem}
-                        onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarItemHover.backgroundColor}
-                        onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
-                    >
-                        <i className="fas fa-cog" style={styles.sidebarIcon}></i>
-                        Settings
-                    </div>
-                </div>
-                <div style={styles.sidebarFooter}>
-                <div
-                        style={styles.sidebarFooterItem}
-                        onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarFooterItemHover.backgroundColor}
-                        onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
-                    >
-                        <i className="fas fa-sign-out-alt" style={styles.sidebarIcon}></i>
-                        Log Out
-                    </div>
-                    <div
-                        style={styles.sidebarFooterItem}
-                        onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarFooterItemHover.backgroundColor}
-                        onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
-                    >
-                        <i className="fas fa-question-circle" style={styles.sidebarIcon}></i>
-                        FAQ
-                    </div>
-                    <div
-                        style={styles.sidebarFooterItem}
-                        onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarFooterItemHover.backgroundColor}
-                        onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
-                    >
-                        <i className="fas fa-question-circle" style={styles.sidebarIcon}></i>
-                        Delete Account
-                    </div>
-                </div>
-            </aside>
+            <Sidebar /> {/* Include the Sidebar component */}
             <main style={styles.mainContent}>
                 <h1>Voting Dashboard</h1>
                 {polls.map(poll => (
@@ -197,6 +95,7 @@ function DashboardScreen() {
                             style={styles.voteButton}
                             onMouseOver={e => e.currentTarget.style.backgroundColor = styles.voteButtonHover.backgroundColor}
                             onMouseOut={e => e.currentTarget.style.backgroundColor = styles.voteButton.backgroundColor}
+                            onClick={() => navigate(`/poll/${poll.id}`)}
                         >
                             Vote
                         </button>
@@ -207,6 +106,7 @@ function DashboardScreen() {
                 style={styles.createPollButton}
                 onMouseOver={e => e.currentTarget.style.backgroundColor = styles.createPollButtonHover.backgroundColor}
                 onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
+                onClick={() => navigate('/create-poll')}
             >
                 +
             </button>
