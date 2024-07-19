@@ -84,7 +84,7 @@ const Sidebar = () => {
                 </div>
                 <div
                     style={styles.sidebarItem}
-                    onClick={() => handleNavigation('/polls')}
+                    onClick={() => handleNavigation('/result')}
                     onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarItemHover.backgroundColor}
                     onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
                 >
