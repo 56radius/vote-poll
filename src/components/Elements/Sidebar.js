@@ -93,11 +93,11 @@ const Sidebar = () => {
                 </div>
                 <div
                     style={styles.sidebarItem}
-                    onClick={() => handleNavigation('/help')}
+                    onClick={() => handleNavigation('/help-center')}
                     onMouseOver={e => e.currentTarget.style.backgroundColor = styles.sidebarItemHover.backgroundColor}
                     onMouseOut={e => e.currentTarget.style.backgroundColor = ''}
                 >
-                    <i className="fas fa-poll" style={styles.sidebarIcon}></i>
+                    <i className="fas fa-question-circle" style={styles.sidebarIcon}></i>
                     Help Center
                 </div>
                 <div

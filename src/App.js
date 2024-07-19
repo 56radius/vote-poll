@@ -10,6 +10,7 @@ import LoginScreen from "./components/LoginScreen";
 import DashboardScreen from "./components/Dashboard/DashboardScreen";
 import PollScreen from "./components/Dashboard/PollScreen"; // Import the PollScreen component
 import ResultScreen from "./components/Dashboard/ResultScreen"; // Import the ResultScreen component
+import HelpCenterScreen from "./components/Dashboard/HelpCenterScreen"; // Import the HelpCenterScreen component
 
 function App() {
     const [showSplash, setShowSplash] = useState(true);
@@ -33,7 +34,8 @@ function App() {
                     <Route path="/login" element={<LoginScreen />} />
                     <Route path="/dashboard" element={<DashboardScreen />} />
                     <Route path="/poll/:pollId" element={<PollScreen />} />
-                    <Route path="/result/:pollId" element={<ResultScreen />} /> {/* Add route for ResultScreen */}
+                    <Route path="/result/:pollId" element={<ResultScreen />} />
+                    <Route path="/help-center" element={<HelpCenterScreen />} /> {/* Add route for HelpCenterScreen */}
                 </Routes>
             </div>
         </Router>
